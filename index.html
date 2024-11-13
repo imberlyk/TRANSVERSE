@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRAVERSING</title>
     <link href="style.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
 </head>
 <body>
     <div class="immerda">     
-        <img id="hand" src="img/frame.png">
+        <img id="hand" src="frame.png">
     </div>
 
     <div class="title">     
@@ -123,56 +123,35 @@
                 <img src="img/34.png" alt="Image 34">
             </div>
             <div class="frame image" data-z="-7000">
-                <img src="img/35.png" alt="Image 35">
+                <img src="3.png" alt="Image 35">
             </div>
             <div class="frame image" data-z="-6000">
-                <img src="img/36.png" alt="Image 36">
+                <img src="rahmen.png" alt="Image 36">
             </div>
             <div class="frame image" data-z="-5000">
-                <img src="img/37.png" alt="Image 37">
+                <img src="rahmen.png" alt="Image 37">
             </div>
             <div class="frame image" data-z="-4000">
-                <img src="img/38.png" alt="Image 38">
+                <img src="wegg.png" alt="Image 38">
             </div>
             <div class="frame image" data-z="-3000">
-                <img src="img/39.png" alt="Image 39">
+                <img src="23.png" alt="Image 39">
             </div>
             <div class="frame image" data-z="-2000">
-                <img src="img/40.png" alt="Image 40">
+                <img src="02.png" alt="Image 40">
             </div>
             <div class="frame image" data-z="-1000">
-                <img src="img/1.png" alt="Image 41">
+                <img src="1.png" alt="Image 41">
             </div>
         </div>
         
     </div>
 
     <svg id="morphSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-        <path id="path1" d="M10 10 H 90 V 90 H 10 L 10 10 Z" fill="black"></path>
+        <path id="path1" d="M10 10 H 90 V 90 H 10 L 10 10 Z" fill="white"></path>
     </svg>
 
-    <script>
-     
-        const morphAnimation = anime({
-            targets: '#path1',
-            d: [
-                { value: 'M20 20 C40 0, 60 0, 80 20 S 60 100, 20 80 Z' },
-                { value: 'M50 10 Q 90 50, 50 90 T 10 50 Z' }
-            ],
-            easing: 'easeInOutQuad',
-            duration: 3000,
-            autoplay: false
-        });
-
-      
-        window.addEventListener('scroll', () => {
-            const scrollPosition = window.scrollY;
-            const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrollPercentage = scrollPosition / windowHeight;
-
-            morphAnimation.seek(scrollPercentage * morphAnimation.duration);
-        });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
       <script src="script.js" type="text/javascript"></script>
 </body>
 </html>

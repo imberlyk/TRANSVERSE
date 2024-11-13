@@ -81,3 +81,25 @@ function slowScrollToTop(duration) {
 
     requestAnimationFrame(animateScroll); // Start animation
 }
+
+
+
+const morphAnimation = anime({
+    targets: '#path1',
+    d: [
+        { value: 'M20 20 C40 0, 60 0, 80 20 S 60 100, 20 80 Z' },
+        { value: 'M50 10 Q 90 50, 50 90 T 10 50 Z' }
+    ],
+    easing: 'easeInOutQuad',
+    duration: 3000,
+    autoplay: false
+});
+
+
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercentage = scrollPosition / windowHeight;
+
+    morphAnimation.seek(scrollPercentage * morphAnimation.duration);
+});
