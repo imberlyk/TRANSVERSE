@@ -11,8 +11,7 @@ a{
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
-  font-family: fantasy;
-  z-index: 3;
+  font-family:Arial, Helvetica, sans-serif;
 
 }
 .container {
@@ -26,13 +25,12 @@ a{
   background: black;
 }
 
-video {
+img {
   width: 100vw !important;
   height: 100vh !important;
   object-fit: cover !important;
   position: fixed;
   top: 0;
   left: 0;
-  pointer-events: none;
-  z-index: -2; 
+  z-index: -2; /* Adjust as needed */
 }
